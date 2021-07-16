@@ -81,6 +81,7 @@ function control_create() {
 	tonextbackup = 0
 	presence = 1 // Discord RPC toggle
 	// presencewindow = 0
+	language = "Chinese"
 	aa = 0
 	accent1 = 0
 	accent2 = 120
@@ -90,7 +91,6 @@ function control_create() {
 	nocdrag = 0
 	rainbow = 0
 	rainbowtoggle = 0
-	
 
 	// File
 	filename = ""

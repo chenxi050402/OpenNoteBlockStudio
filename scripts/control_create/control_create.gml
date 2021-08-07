@@ -20,10 +20,11 @@ function control_create() {
 	//if (RUN_FROM_IDE != 1) isplayer = 1
 	window_width = 0
 	window_height = 0
-	if (!isplayer) window_maximize()
-	window_set_focus()
+	//if (!isplayer) window_maximize()
+	//window_set_focus()
 	window_set_min_width(100)
 	window_set_min_height(100)
+	window_set_size(1280, 720)
 	window_scale = get_default_window_scale()
 	if (isplayer) window_set_size(floor(800 * window_scale), floor(500 * window_scale))
 	cam_window = camera_create()
@@ -432,7 +433,7 @@ function control_create() {
 	downloaded_size = 0
 	total_size = -1
 	changelogstr = load_text(data_directory + "changelog.txt")
-	if (file_exists_lib(settings_file) && vers != version) {
+	if (file_exists(settings_file) && vers != version) {
 		if (theme = 2) fdark = 1
 		theme = 3 // Sets to the Fluent theme when updated
 	    window = w_update
@@ -440,8 +441,8 @@ function control_create() {
 	}
 
 	// Delete old installer
-	if (file_exists_lib(update_file)) {
-		files_delete_lib(update_file)
+	if (file_exists(update_file)) {
+		file_delete(update_file)
 	}
 
 	// Auto-recovery

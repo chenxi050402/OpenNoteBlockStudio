@@ -181,7 +181,7 @@ function draw_window_greeting() {
 	draw_text(b + 48 + (a > 1), c + 9 + (a > 1), "Watch tutorial videos")
 	if (a = 2 && mouse_check_button_released(mb_left)) {
 		if (windowsound && theme = 3) play_sound(soundinvoke, 45, 100, 50, 0)
-		open_url("http://www.youtube.com/playlist?list=PL7EA4F0D271DA6E86")
+		url_open("http://www.youtube.com/playlist?list=PL7EA4F0D271DA6E86")
 	}
 
 	window_set_cursor(curs)

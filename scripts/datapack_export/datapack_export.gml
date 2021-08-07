@@ -38,9 +38,9 @@ function datapack_export() {
 		}
 	
 		// Create folder structure
-		tempdir = data_directory + "TempDatapack\\"
-		if (directory_exists_lib(tempdir)) {
-			directory_delete_lib(tempdir)
+		tempdir = data_directory + "TempDatapack/"
+		if (directory_exists(tempdir)) {
+			directory_delete(tempdir)
 		}
 		functiondir = dat_makefolders(path, namespace)
 	
@@ -52,11 +52,11 @@ function datapack_export() {
 	
 		//load.json
 		inputString = "{\"values\": [\"" + functionpath + "load\"]}"
-		dat_writefile(inputString, tempdir + "data\\minecraft\\tags\\functions\\load.json")
+		dat_writefile(inputString, tempdir + "data/minecraft/tags/functions/load.json")
 	
 		//tick.json
 		inputString = "{\"values\": [\"" + functionpath + "tick\"]}"
-		dat_writefile(inputString, tempdir + "data\\minecraft\\tags\\functions\\tick.json")
+		dat_writefile(inputString, tempdir + "data/minecraft/tags/functions/tick.json")
 	
 		//Song folder:
 	
@@ -173,12 +173,12 @@ function datapack_export() {
 	
 		// Execute shell command to create ZIP, or to move temp folder to location
 		if (o.dat_usezip) {
-			ExecuteShell("7za a -tzip \"" + fn + "\" \"" + data_directory + "TempDatapack\\*\"", true, true)
+			ExecuteShell("7za a -tzip \"" + fn + "\" \"" + data_directory + "TempDatapack/*\"", true, true)
 		} else {
 			ExecuteShell("\"" + data_directory + "move.bat\" \"" + fn + "\\\"", true, true)
 		}
 	
-		directory_delete_lib(tempdir)
+		directory_destroy(tempdir)
 		instance_destroy()
 	}
 

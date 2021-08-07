@@ -147,7 +147,7 @@ function draw_window_preferences_f() {
 	        if (!directory_exists_lib(songfolder)) {
 	            message("The indicated folder doesn't exist!", "Error")
 	        } else {
-	            open_url(songfolder)
+	            url_open(songfolder)
 	        }
 	    }
 	    if (draw_button2(x1 + 22 + 84, y1 + 306 + 22, 76, "Change", 0, 1)) {
@@ -163,7 +163,7 @@ function draw_window_preferences_f() {
 	        if (!directory_exists_lib(patternfolder)) {
 	            message("The indicated folder doesn't exist!", "Error")
 	        } else {
-	            open_url(patternfolder)
+	            url_open(patternfolder)
 	        }
 	    }
 	    if (draw_button2(x1 + 22 + 84, y1 + 356 + 22, 76, "Change", 0, 1)) {

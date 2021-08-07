@@ -607,7 +607,7 @@ function control_draw() {
 	    }
 		if (keyboard_check_pressed(vk_space)) toggle_playing(totalcols) timestoloop = real(loopmax)
 	    if (keyboard_check_pressed(vk_f1)) {
-	        open_url("http://www.youtube.com/playlist?list=PL7EA4F0D271DA6E86")
+	        url_open("http://www.youtube.com/playlist?list=PL7EA4F0D271DA6E86")
 	    }
 		// Instrument shortcuts
 		if (keyboard_check_pressed(ord("M")) && keyboard_check(vk_control) && keyboard_check(vk_shift) && theme = 3) {
@@ -1443,9 +1443,9 @@ function control_draw() {
 	if (!isplayer) {if (draw_icon(icons.MIDI_INPUT, xx, yy, "MIDI device manager")) {playing = 0 window = w_mididevices} xx += 25 if (xx > rw - 190) break}
 	xx += 4 draw_separator(xx, yy + 3) xx += 4 if (xx > rw - 190) break
 	if (draw_icon(icons.HELP, xx, yy, "Watch tutorial videos")) {
-	    open_url("http://www.youtube.com/playlist?list=PL7EA4F0D271DA6E86")
+	    url_open("http://www.youtube.com/playlist?list=PL7EA4F0D271DA6E86")
 	} xx += 25 if (xx > rw - 190) break
-	if (draw_icon(icons.INTERNET, xx, yy, "Visit the Minecraft Forums topic")) {open_url(link_topic)} xx += 25 if (xx > rw - 190) break
+	if (draw_icon(icons.INTERNET, xx, yy, "Visit the Minecraft Forums topic")) {url_open(link_topic)} xx += 25 if (xx > rw - 190) break
 	break
 	}
 
@@ -1593,7 +1593,7 @@ function control_draw() {
 
 	draw_set_halign(fa_right)
 	str = ""
-	for (a = 0; a < midi_devices; a += 1) str += condstr(a > 0, ", ") + midi_input_device_name(a)
+	//for (a = 0; a < midi_devices; a += 1) str += condstr(a > 0, ", ") + midi_input_device_name(a)
 	if (midi_devices = 0) str = "No connected MIDI devices"
 	else str = "MIDI devices: " + str
 	draw_text(rw - 6, rh - 18, str)

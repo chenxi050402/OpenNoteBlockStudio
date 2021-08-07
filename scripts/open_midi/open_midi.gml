@@ -7,7 +7,7 @@ function open_midi(argument0) {
 	fn = argument0
 	if (confirm() < 0) return 0
 	if (fn = "") fn = string(get_open_filename_ext("MIDI Sequences (*.mid)|*.midi;*.mid", "", "", "Import from MIDI"))
-	if (fn = "" || !file_exists_lib(fn)) return 0
+	if (fn = "" || !file_exists(fn)) return 0
 	reset()
 	buffer = buffer_import(fn)
 

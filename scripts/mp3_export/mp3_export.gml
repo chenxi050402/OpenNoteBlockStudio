@@ -57,7 +57,7 @@ function mp3_export() {
 	}
 
 	if (question("MP3 saved! Do you want to open it?", "MP3 Export"))
-	    open_url(fn)
+	    url_open(fn)
 
 
 

@@ -24,7 +24,7 @@ function draw_window_instruments() {
 	    else draw_area(x1 + 11, y1 + 67, x1 + 535, y1 + 312)
 	}
 	if (draw_button2(x1 + 455, y1 + 9, 80, "Import", 0, 1)) load_instruments("")
-	if (draw_button2(x1 + 455, y1 + 36, 80, "Open Folder", 0, 1)) open_url(sounds_directory)
+	if (draw_button2(x1 + 455, y1 + 36, 80, "Open Folder", 0, 1)) url_open(sounds_directory)
 	// Tabs
 	draw_window(x1 + 13 + 194 + 160 + 80, y1 + 67, x1 + 14 + 194 + 160 + 80 + 88 - 1, y1 + 67 + 20, 1)
 	popup_set_window(x1 + 13 + 194 + 160 + 80 - 1, y1 + 67, 88, 20, "Whether notes of this type should be\npressed when the marker reaches them.")
@@ -58,7 +58,7 @@ function draw_window_instruments() {
 	if (insselect > -1 && instrument_list[| insselect].user)
 	    userselect = instrument_list[| insselect]
 	if (draw_button2(x1 + 194, y1 + 318, 80, "Remove", userselect < 0) && wmenu = 0) {
-		if ((userselect.num_blocks == 0) || (message_yesnocancel("This will remove " + string(userselect.num_blocks) + " block" + condstr(userselect.num_blocks > 1, "s") + " using this instrument and cannot be undone. Confirm?", "Warning"))) {
+		if ((userselect.num_blocks == 0) || (question("This will remove " + string(userselect.num_blocks) + " block" + condstr(userselect.num_blocks > 1, "s") + " using this instrument and cannot be undone. Confirm?", "Warning"))) {
 			instrument_remove(userselect)
 			insselect = min(ds_list_size(instrument_list) - 1, insselect)
 			if (instrument = userselect)

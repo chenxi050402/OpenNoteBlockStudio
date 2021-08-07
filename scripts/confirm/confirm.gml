@@ -12,7 +12,7 @@ function confirm() {
 	if (changed && !isplayer) {
 	    if (filename = "") {
 	        if (!gameend)
-	            a = message_yesnocancel("Do you want to save the song?", "Confirm")
+	            a = question("Do you want to save the song?", "Confirm")
 	        else
 	            a = question("Do you want to save the song before quitting?", "Confirm")
 	        if (a = 1)
@@ -20,7 +20,7 @@ function confirm() {
 	                return -1
 	    } else {
 	        if (!gameend)
-	            a = message_yesnocancel("Do you want to save the changes made in " + filename_name(filename) + "?", "Confirm")
+	            a = question("Do you want to save the changes made in " + filename_name(filename) + "?", "Confirm")
 	        else
 	            a = question("Do you want to save the changes made in " + filename_name(filename) + " before quitting?", "Confirm")
 	        if (a = 1)

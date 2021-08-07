@@ -172,16 +172,16 @@ function menu_click(argument0) {
 	        break
 	    }
 	    case "help": {
-	        if (sel = 1) open_url("http://www.youtube.com/watch?v=2oD9Bw_Qau4")
-	        if (sel = 2) open_url("http://www.youtube.com/watch?v=NIxNTK6nfJI")
-	        if (sel = 3) open_url("http://www.youtube.com/watch?v=JMPkf7bS8lQ")
-	        if (sel = 4) open_url("http://www.youtube.com/watch?v=Cg6dAcEjTs0")
-	        if (sel = 5) open_url("http://www.youtube.com/playlist?list=PL7EA4F0D271DA6E86")
-	        if (sel = 6) open_url(link_topic)
-	        if (sel = 7) open_url("http://minecraft.gamepedia.com/Programs_and_editors/Minecraft_Note_Block_Studio")
+	        if (sel = 1) url_open("http://www.youtube.com/watch?v=2oD9Bw_Qau4")
+	        if (sel = 2) url_open("http://www.youtube.com/watch?v=NIxNTK6nfJI")
+	        if (sel = 3) url_open("http://www.youtube.com/watch?v=JMPkf7bS8lQ")
+	        if (sel = 4) url_open("http://www.youtube.com/watch?v=Cg6dAcEjTs0")
+	        if (sel = 5) url_open("http://www.youtube.com/playlist?list=PL7EA4F0D271DA6E86")
+	        if (sel = 6) url_open(link_topic)
+	        if (sel = 7) url_open("http://minecraft.gamepedia.com/Programs_and_editors/Minecraft_Note_Block_Studio")
 	        if (sel = 8) window = w_changelist
 	        if (sel = 9) window = w_about
-	        if (sel = 10) open_url("https://github.com/HielkeMinecraft/OpenNoteBlockStudio")
+	        if (sel = 10) url_open("https://github.com/HielkeMinecraft/OpenNoteBlockStudio")
 	        break
 	    }
 	    case "section": {

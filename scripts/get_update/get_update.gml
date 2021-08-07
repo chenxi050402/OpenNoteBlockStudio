@@ -20,7 +20,7 @@ function get_update() {
 				game_end()
 			} else {
 				if (question("Failed to download update. Do you want to open the Note Block Studio website and update manually?", "Failed")) {
-					open_url(link_download)
+					url_open(link_download)
 				}
 			window = w_greeting
 			update_download = -1

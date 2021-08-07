@@ -9,6 +9,7 @@ function control_create() {
 
 	// Initialize DLLs
 	lib_init()
+	widget_set_owner(string(int64(window_handle())))
 
 	// Window
 	#macro RUN_FROM_IDE parameter_count()==3&&string_count("GMS2TEMP",parameter_string(2))

@@ -312,7 +312,7 @@
     "Included Files\\icon.png",
   ],
   "androidPermissions": [],
-  "copyToTargets": 202375362,
+  "copyToTargets": 194,
   "iosCocoaPods": "",
   "tvosCocoaPods": "",
   "iosCocoaPodDependencies": "",

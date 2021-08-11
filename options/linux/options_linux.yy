@@ -7,7 +7,7 @@
   "option_linux_long_desc": "Minecraft Note Block Studio",
   "option_linux_splash_screen": "${options_dir}/linux/splash/splash.png",
   "option_linux_display_splash": false,
-  "option_linux_icon": "${options_dir}/linux/icons/icon64.png",
+  "option_linux_icon": "icons/64.png",
   "option_linux_start_fullscreen": false,
   "option_linux_allow_fullscreen": true,
   "option_linux_interpolate_pixels": false,

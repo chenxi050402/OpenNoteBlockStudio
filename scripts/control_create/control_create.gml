@@ -45,6 +45,7 @@ function control_create() {
 	showmsg = 0 // Displays message when set to 1
 	msgcontent = ""
 	msgstart = 0
+	currentfont = 0
 
 	// Audio
 	channels = 256
@@ -81,7 +82,7 @@ function control_create() {
 	tonextbackup = 0
 	presence = 1 // Discord RPC toggle
 	// presencewindow = 0
-	language = "Chinese"
+	language = 1
 	aa = 0
 	accent1 = 0
 	accent2 = 120

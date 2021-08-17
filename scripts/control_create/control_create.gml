@@ -82,7 +82,7 @@ function control_create() {
 	tonextbackup = 0
 	presence = 1 // Discord RPC toggle
 	// presencewindow = 0
-	language = 1
+	language = 0
 	aa = 0
 	accent1 = 0
 	accent2 = 120

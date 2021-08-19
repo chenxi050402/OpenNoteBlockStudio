@@ -31,5 +31,5 @@ function draw_window_about() {
 	if (draw_button2(x1 + 120, y1 + 370, 72, "确定", false) && (windowopen = 1 || theme != 3)) {
 		windowclose = 1
 	}
-	window_set_cursor(cr_default)
+	if (array_length(text_mouseover) = 0) window_set_cursor(cr_default)
 }

@@ -80,9 +80,9 @@ function control_create() {
 	tonextsave = 0
 	backupmins = 1
 	tonextbackup = 0
+	language = 1 * (os_get_language() = "zh" && os_get_region() = "CN")
 	presence = 1 // Discord RPC toggle
 	// presencewindow = 0
-	language = 0
 	aa = 0
 	accent1 = 0
 	accent2 = 120

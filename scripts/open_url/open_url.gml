@@ -1,5 +1,5 @@
 function open_url(argument0) {
-	// open_url(url)
+	// url_open(url)
 
 	external_call(lib_open_url, argument0)
 

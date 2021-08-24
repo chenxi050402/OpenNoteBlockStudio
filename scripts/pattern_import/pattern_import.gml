@@ -5,7 +5,7 @@ function pattern_import() {
 	fn = ""
 	if (selected != 0) return 0
 	if (fn = "") {
-	    if (!directory_exists_lib(patternfolder)) patternfolder = pattern_directory
+	    if (!directory_exists(patternfolder)) patternfolder = pattern_directory
 	    fn = string(get_open_filename_ext("Note Block Pattern (*.nbp)|*.nbp", "", patternfolder, condstr(language != 1, "Load pattern", "打开分段")))
 	}
 	if (fn = "" || !file_exists(fn)) return 0

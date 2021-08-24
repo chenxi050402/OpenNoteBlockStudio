@@ -26,7 +26,7 @@ function get_update() {
 				}
 				} else {
 				if (question("下载更新失败。你想要到Note Block Studio官网手动更新吗？", "失败")) {
-					open_url(link_download)
+					url_open(link_download)
 				}
 				}
 			window = w_greeting
